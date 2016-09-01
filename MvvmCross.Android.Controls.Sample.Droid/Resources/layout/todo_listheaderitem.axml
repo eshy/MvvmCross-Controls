@@ -7,7 +7,7 @@
     android:minWidth="25px"
     android:minHeight="25px">
     <TextView
-        local:MvxBind="Text FinishByDisplay"
+        local:MvxBind="Text Key"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

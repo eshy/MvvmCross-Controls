@@ -86,8 +86,8 @@ namespace MvvmCross.Android.Controls.SectionedRecyclerView
             var itemIndex = position - sectionHeader.Key - 1;
             if (position == sectionHeader.Key)
             {
-                //This is a header, no item for it. Return the first item for now
-                itemIndex = 0;
+                //This is a header row, return the section itself to support binding the key or other properties a section might have
+                return section;
             }
 
             //Mvx.TaggedTrace(LogTag, "position {0}, key {1}, value {2}, itemIndex {3}, items in section {4}", position, sectionHeader.Key, sectionHeader.Value, itemIndex, section.Count());
