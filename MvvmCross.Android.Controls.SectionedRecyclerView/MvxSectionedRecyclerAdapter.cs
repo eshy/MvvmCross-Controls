@@ -35,9 +35,10 @@ namespace MvvmCross.Android.Controls.SectionedRecyclerView
                     var itemCount = GetSectionItemCount(s);
                     if (_showHeaderForEmptySections || itemCount > 0)
                     {
-                        //TODO: Save the index of this section
+                        //Save the index of this section
                         _headerLocationMap[count] = s;
-                        count += itemCount;
+                        //add the header + items in section to total count
+                        count += itemCount + 1; 
                     }
                 }
 
