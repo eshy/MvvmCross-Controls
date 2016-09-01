@@ -2,18 +2,13 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:local="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent">
-  <EditText
-    android:layout_width="fill_parent"
-    android:layout_height="wrap_content"
-    android:textSize="40dp"
-    local:MvxBind="Text Hello"
-    />
-  <TextView
-    android:layout_width="fill_parent"
-    android:layout_height="wrap_content"
-    android:textSize="40dp"
-    local:MvxBind="Text Hello"
-    />
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+  <MvvmCross.Android.Controls.SectionedRecyclerView.MvxSectionedRecyclerView
+      android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        local:MvxBind="ItemsSource GroupedItems"
+        local:MvxItemTemplate="@layout/todo_listitem"
+        local:MvxGroupItemTemplate="@layout/todo_listheaderitem" />
 </LinearLayout>
