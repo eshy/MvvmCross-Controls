@@ -9,7 +9,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Controls", "Controls", "{E5
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Nuspec", "Nuspec", "{78DF8893-7CAA-467B-8618-AACA7F224D78}"
 	ProjectSection(SolutionItems) = preProject
-		nuspec\MvvmCross.Android.Controls.SectionedRecyclerView.nuspec = nuspec\MvvmCross.Android.Controls.SectionedRecyclerView.nuspec
+		nuspec\MvvmCross.Controls.Android.RecyclerViewPlus.nuspec = nuspec\MvvmCross.Controls.Android.RecyclerViewPlus.nuspec
+		nuspec\MvvmCross.Controls.Android.SectionedRecyclerView.nuspec = nuspec\MvvmCross.Controls.Android.SectionedRecyclerView.nuspec
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvvmCross.Controls.Android.RecyclerViewPlus", "Controls\MvvmCross.Controls.Android.RecyclerViewPlus\MvvmCross.Controls.Android.RecyclerViewPlus.csproj", "{F644825B-66BE-4B42-853B-B39DE2F21CDB}"

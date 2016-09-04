@@ -11,5 +11,6 @@ Set-Alias nuget $targetNugetExe -Scope Global -Verbose
 del *.nupkg
 
 nuget pack MvvmCross.Controls.Android.SectionedRecyclerView.nuspec -Symbols
+nuget pack MvvmCross.Controls.Android.RecyclerViewPlus.nuspec -Symbols
 
 pause

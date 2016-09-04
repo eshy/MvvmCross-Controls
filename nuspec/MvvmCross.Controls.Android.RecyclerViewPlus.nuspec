@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
 	<metadata>
-		<id>MvvmCross.Controls.Android.SectionedRecyclerView</id>
-		<version>1.0.0</version>
-		<title>SectionedRecyclerView for MvvmCross Android</title>
+		<id>MvvmCross.Controls.Android.RecyclerViewPlus</id>
+		<version>1.0.0-beta1</version>
+		<title>RecyclerViewPlus for MvvmCross Android</title>
 		<authors>Ishai Hachlili</authors>
 		<owners>Ishai Hachlili</owners>
 		<projectUrl>https://github.com/eshy/MvvmCross-Android-Controls</projectUrl>
 		<requireLicenseAcceptance>false</requireLicenseAcceptance>
-		<description>A simple Sectioned/Grouped RecyclerView</description>
+		<description>A RecyclerView with extra features</description>
 		<tags>mvvm mvvmcross cross xamarin android forms monodroid xamarin.android xamarin.forms net net45 netcore support recyclerview sectionedrecyclerview</tags>
 		<dependencies>
 			<group targetFramework="MonoAndroid">
@@ -20,6 +20,11 @@
 		</releaseNotes>
 	</metadata>
 	<files>
-    <file src="..\Release\Android\MvvmCross.Controls.Android.SectionedRecyclerView.*" target="lib\MonoAndroid403" />
-  </files>
+    <!-- PCL -->
+    <file src="..\Release\Portable\MvvmCross.Controls.Core.IncrementalLoadingList.*" target="lib\portable45-net45+win8+wp8+wpa81" />
+
+    <!-- droid -->
+    <file src="..\Release\Portable\MvvmCross.Controls.Core.IncrementalLoadingList.*" target="lib\portable45-net45+win8+wp8+wpa81" />
+    <file src="..\Release\Android\MvvmCross.Controls.Android.RecyclerViewPlus.*" target="lib\MonoAndroid" />
+	</files>
 </package>
