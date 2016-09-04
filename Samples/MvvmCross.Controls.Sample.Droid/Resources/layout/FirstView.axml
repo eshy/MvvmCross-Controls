@@ -4,11 +4,30 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <MvvmCross.Controls.Android.SectionedRecyclerView.MvxSectionedRecyclerView
+    <LinearLayout
+        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        local:MvxBind="ItemsSource GroupedItems"
-        local:MvxItemTemplate="@layout/todo_listitem"
-        local:MvxGroupItemTemplate="@layout/todo_listheaderitem" />
+        android:layout_height="wrap_content">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Grouped"
+            android:id="@+id/button"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0"
+            local:MvxBind="Click ShowGroupedListCommand" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Incremental"
+            android:id="@+id/button"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0"
+            local:MvxBind="Click ShowIncrementalListCommand" />
+    </LinearLayout>
+    <FrameLayout
+        android:id="@+id/contentFrame"
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="1" />
 </LinearLayout>

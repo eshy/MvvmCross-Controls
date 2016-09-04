@@ -1,4 +1,6 @@
+using MvvmCross.Controls.Core.IncrementalLoadingList;
 using MvvmCross.Controls.Sample.Core.ViewModels;
+using MvvmCross.Platform;
 using MvvmCross.Platform.IoC;
 
 namespace MvvmCross.Controls.Sample.Core
@@ -11,6 +13,8 @@ namespace MvvmCross.Controls.Sample.Core
                 .EndingWith("Service")
                 .AsInterfaces()
                 .RegisterAsLazySingleton();
+
+            Mvx.RegisterSingleton<IIncrementalCollectionFactory>(new IncrementalCollectionFactory());
 
             RegisterAppStart<FirstViewModel>();
         }

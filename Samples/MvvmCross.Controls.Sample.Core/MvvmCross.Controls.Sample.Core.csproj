@@ -39,7 +39,9 @@
     <Compile Include="Helpers\ObservableRangeCollection.cs" />
     <Compile Include="Model\ToDoItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\IncrementalListViewModel.cs" />
     <Compile Include="ViewModels\FirstViewModel.cs" />
+    <Compile Include="ViewModels\GroupedListViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="MvvmCross.Binding, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
@@ -61,6 +63,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Controls\MvvmCross.Controls.Core.IncrementalLoadingList\MvvmCross.Controls.Core.IncrementalLoadingList.csproj">
+      <Project>{6446610E-7E0C-4B26-A7D8-8AFC8676BCFA}</Project>
+      <Name>MvvmCross.Controls.Core.IncrementalLoadingList</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
