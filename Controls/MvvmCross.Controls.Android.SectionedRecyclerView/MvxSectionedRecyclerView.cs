@@ -20,8 +20,8 @@ namespace MvvmCross.Controls.Android.SectionedRecyclerView
             var headerTemplateId = MvxAttributeHelpers.ReadAttributeValue(context, attrs,
                                             MvxAndroidBindingResource.Instance.ExpandableListViewStylableGroupId,
                                             MvxAndroidBindingResource.Instance.GroupItemTemplateId);
-            IMvxRecyclerAdapter headerAdapter = new MvxSectionedRecyclerAdapter(false, headerTemplateId);
-            Adapter = headerAdapter;
+            IMvxRecyclerAdapter adapter = new MvxSectionedRecyclerAdapter(false, headerTemplateId);
+            Adapter = adapter;
         }
 
         public MvxSectionedRecyclerView(Context context, IAttributeSet attrs, int defStyle) : base(context, attrs, defStyle)

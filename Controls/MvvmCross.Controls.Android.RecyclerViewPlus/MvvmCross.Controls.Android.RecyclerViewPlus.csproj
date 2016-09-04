@@ -93,6 +93,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MvxRecyclerAdapterPlus.cs" />
+    <Compile Include="MvxRecyclerEndlessScrollListener.cs" />
     <Compile Include="MvxRecyclerViewPlus.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

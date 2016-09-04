@@ -1,4 +1,5 @@
 using System;
+using System.Threading.Tasks;
 using Android.Content;
 using Android.Runtime;
 using Android.Util;
@@ -15,11 +16,26 @@ namespace MvvmCross.Controls.Android.RecyclerViewPlus
 
         public MvxRecyclerViewPlus(Context context, IAttributeSet attrs) : base(context, attrs)
         {
+            Initialize();
+        }
 
-            IMvxRecyclerAdapter headerAdapter = new MvxRecyclerAdapterPlus();
+        private void Initialize()
+        {
+            IMvxRecyclerAdapter adapter = new MvxRecyclerAdapterPlus();
+            Adapter = adapter;
+            var layoutManager = GetLayoutManager();
+            var scrollListener = new MvxRecyclerEndlessScrollListener(layoutManager, LoadMoreDataAsync);
+            AddOnScrollListener(scrollListener);
+        }
 
-            Adapter = headerAdapter;
-
+        private async Task<int> LoadMoreDataAsync(int page, int totalRecordCount)
+        {
+            var adapter = (Adapter as MvxRecyclerAdapterPlus);
+            if (adapter != null)
+            {
+                await adapter.LoadMoreItemsAsync();
+            }
+            return 0;
         }
 
         public MvxRecyclerViewPlus(Context context, IAttributeSet attrs, int defStyle) : base(context, attrs, defStyle)
@@ -29,5 +45,6 @@ namespace MvvmCross.Controls.Android.RecyclerViewPlus
         public MvxRecyclerViewPlus(Context context, IAttributeSet attrs, int defStyle, IMvxRecyclerAdapter adapter) : base(context, attrs, defStyle, adapter)
         {
         }
+
     }
 }
