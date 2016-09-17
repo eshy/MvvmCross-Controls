@@ -2,11 +2,11 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
 	<metadata>
 		<id>MvvmCross.Controls.Android.SectionedRecyclerView</id>
-		<version>1.0.0</version>
+		<version>1.0.1</version>
 		<title>SectionedRecyclerView for MvvmCross Android</title>
 		<authors>Ishai Hachlili</authors>
 		<owners>Ishai Hachlili</owners>
-		<projectUrl>https://github.com/eshy/MvvmCross-Android-Controls</projectUrl>
+		<projectUrl>https://github.com/eshy/MvvmCross-Controls</projectUrl>
 		<requireLicenseAcceptance>false</requireLicenseAcceptance>
 		<description>A simple Sectioned/Grouped RecyclerView</description>
 		<tags>mvvm mvvmcross cross xamarin android forms monodroid xamarin.android xamarin.forms net net45 netcore support recyclerview sectionedrecyclerview</tags>

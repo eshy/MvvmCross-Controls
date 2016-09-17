@@ -100,6 +100,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Bootstrap\IncrementalListPluginBootstrap.cs" />
     <Compile Include="DebugTrace.cs" />
     <Compile Include="LinkerPleaseInclude.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
@@ -149,17 +150,17 @@
     <AndroidResource Include="Resources\drawable\splash.png" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Controls\MvvmCross.Controls.Android.RecyclerViewPlus\MvvmCross.Controls.Android.RecyclerViewPlus.csproj">
+    <ProjectReference Include="..\..\Controls\IncrementalList\MvvmCross.Controls.IncrementalLoadingList.Droid\MvvmCross.Controls.IncrementalLoadingList.Droid.csproj">
       <Project>{f644825b-66be-4b42-853b-b39de2f21cdb}</Project>
-      <Name>MvvmCross.Controls.Android.RecyclerViewPlus</Name>
+      <Name>MvvmCross.Controls.IncrementalLoadingList.Droid</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Controls\IncrementalList\MvvmCross.Controls.IncrementalLoadingList\MvvmCross.Controls.IncrementalLoadingList.csproj">
+      <Project>{6446610e-7e0c-4b26-a7d8-8afc8676bcfa}</Project>
+      <Name>MvvmCross.Controls.IncrementalLoadingList</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\Controls\MvvmCross.Controls.Android.SectionedRecyclerView\MvvmCross.Controls.Android.SectionedRecyclerView.csproj">
       <Project>{0d2fdf0f-61e1-4059-9c42-72642fa73145}</Project>
       <Name>MvvmCross.Controls.Android.SectionedRecyclerView</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Controls\MvvmCross.Controls.Core.IncrementalLoadingList\MvvmCross.Controls.Core.IncrementalLoadingList.csproj">
-      <Project>{6446610e-7e0c-4b26-a7d8-8afc8676bcfa}</Project>
-      <Name>MvvmCross.Controls.Core.IncrementalLoadingList</Name>
     </ProjectReference>
     <ProjectReference Include="..\MvvmCross.Controls.Sample.Core\MvvmCross.Controls.Sample.Core.csproj">
       <Project>{e4e0eb36-7249-4823-a4a0-3bb8556db140}</Project>
