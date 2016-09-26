@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
 	<metadata>
 		<id>MvvmCross.Controls.IncrementalLoadingList</id>
-		<version>1.0.0-beta8</version>
+		<version>1.0.0-beta9</version>
 		<title>Incremental Loading List for MvvmCross</title>
 		<authors>Ishai Hachlili</authors>
 		<owners>Ishai Hachlili</owners>
@@ -45,6 +45,7 @@
       </group>
 		</dependencies>
 		<releaseNotes>
+      Added count properties to ItemsLoaded event args
 		</releaseNotes>
 	</metadata>
 	<files>

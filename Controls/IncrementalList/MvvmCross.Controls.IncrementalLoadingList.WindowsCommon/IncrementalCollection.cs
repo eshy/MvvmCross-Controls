@@ -60,9 +60,12 @@ namespace MvvmCross.Controls.IncrementalLoadingList.WindowsCommon
                 }
             }
             HasMoreItems = resultCount > 0;
-
             _onBatchComplete?.Invoke(sourceData);
-            ItemsLoaded?.Invoke(this,new EventArgs());
+            OnItemsLoaded(new ItemsLoadedEventArgs
+            {
+                CurrentLoadCount = (int) resultCount,
+                TotalRecordCount = Items.Count
+            });
 
             return new LoadMoreItemsResult
             {
@@ -75,6 +78,11 @@ namespace MvvmCross.Controls.IncrementalLoadingList.WindowsCommon
             return InnerLoadMoreItemsAsync(0);
         }
 
-        public event EventHandler ItemsLoaded;
+        public event ItemsLoadedEventHandler ItemsLoaded;
+        protected virtual void OnItemsLoaded(ItemsLoadedEventArgs e)
+        {
+            ItemsLoaded?.Invoke(this, e);
+        }
     }
+
 }

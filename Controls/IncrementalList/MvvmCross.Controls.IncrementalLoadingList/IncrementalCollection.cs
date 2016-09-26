@@ -35,10 +35,18 @@ namespace MvvmCross.Controls.IncrementalLoadingList
             var sourceData = await _sourceDataFunc(Count, DefaultPageSize);
             AddItemsToList(sourceData);
             _onBatchComplete?.Invoke(sourceData);
-            ItemsLoaded?.Invoke(this, new EventArgs());
+            OnItemsLoaded(new ItemsLoadedEventArgs
+            {
+                CurrentLoadCount = sourceData.Count,
+                TotalRecordCount = Items.Count
+            });
         }
 
-        public event EventHandler ItemsLoaded;
+        public event ItemsLoadedEventHandler ItemsLoaded;
+        protected virtual void OnItemsLoaded(ItemsLoadedEventArgs e)
+        {
+            ItemsLoaded?.Invoke(this, e);
+        }
 
         private void AddItemsToList(IEnumerable<T> items)
         {

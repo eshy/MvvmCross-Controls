@@ -43,9 +43,9 @@ namespace MvvmCross.Controls.Sample.Core.ViewModels
             }
         }
 
-        private void OnItemsLoaded(object sender, EventArgs e)
+        private void OnItemsLoaded(object sender, ItemsLoadedEventArgs e)
         {
-            Mvx.TaggedTrace(nameof(IncrementalListViewModel), "OnItemsLoaded");
+            Mvx.TaggedTrace(nameof(IncrementalListViewModel), "OnItemsLoaded (current count={0}, total count={1})", e.CurrentLoadCount, e.TotalRecordCount);
 
         }
 
